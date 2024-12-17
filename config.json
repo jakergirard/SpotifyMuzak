@@ -1,0 +1,23 @@
+{
+  "spotify": {
+    "username": "YOUR_SPOTIFY_USERNAME",
+    "password": "YOUR_SPOTIFY_PASSWORD",
+    "clientId": "YOUR_SPOTIFY_CLIENT_ID",
+    "clientSecret": "YOUR_SPOTIFY_CLIENT_SECRET",
+    "deviceName": "Living Room Music"
+  },
+  "audio": {
+    "device": "default",
+    "format": "S16_LE",
+    "rate": 44100,
+    "volume": {
+      "initial": 80,
+      "max": 100
+    }
+  },
+  "autoplay": {
+    "enabled": true,
+    "fallbackPlaylist": "YOUR_FALLBACK_PLAYLIST_ID",
+    "similarTracksCount": 50
+  }
+}

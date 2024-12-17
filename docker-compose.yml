@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  spotify-player:
+    build: .
+    restart: always
+    devices:
+      - "/dev/snd:/dev/snd"
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - PULSE_SERVER=unix:/run/user/1000/pulse/native
+    privileged: true # Required for audio access
+    network_mode: "host" # Required for Spotify Connect discovery
